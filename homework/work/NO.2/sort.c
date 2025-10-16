@@ -1,5 +1,6 @@
 
 #include<stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -70,19 +71,31 @@ void insertionSort(int arr[], int n){
     }
 } 
 
-//被快速排序打爆了😭
+
 
 int main()
 {
     int n = 10;
-    int arr[10] = {0};
-    generateArray(arr, n);
-    
-    printArray(arr, n);
+    int arr[3][10] = {0};
+    generateArray(arr[0], n);
+    memcpy(arr[1], arr[0], n * sizeof(int));
+    memcpy(arr[2], arr[0], n * sizeof(int));
 
 
-    bubbleSort(arr, n);
-    printArray(arr, n);
+    printf("原始数组: ");
+    printArray(arr[0], n);
+
+    printf("冒泡排序: ");
+    bubbleSort(arr[0], n);
+    printArray(arr[0], n);
+
+    printf("选择排序: ");
+    selectionSort(arr[1], n);
+    printArray(arr[1], n);
+
+    printf("插入排序: ");
+    insertionSort(arr[2], n);
+    printArray(arr[2], n);
     
     return 0;
 }
