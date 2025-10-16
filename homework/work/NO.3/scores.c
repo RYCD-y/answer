@@ -34,14 +34,14 @@ double calculateAverage(int *scores, int n){
  min 指向存储最低分的变量的指针
  */
 void findMinMax(int *scores, int n, int *max, int *min){
-    max = scores;
-    min = scores;
+    *max = *scores;
+    *min = *scores;
     for(int i = 0; i < n; i++){
         if(*max < *(scores + i)){
-            max = scores + i;
+            *max = *(scores + i);
         }
         if(*min > *(scores + i)){
-            min = scores + i;
+            *min = *(scores + i);
         }  
     }
 }
