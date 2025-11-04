@@ -89,7 +89,7 @@ _Bool verify(Data user_data, unsigned long long password, _Bool *state_input){
             
         }else{
             //惩罚环节
-            attempt = 2;
+            attempt = 3;
             printf("\033[31m请5分钟后再试\033[0m\033[90m冻结次数%d\033[0m\n\n", times_frozen++);//测试为15s
 #ifdef _WIN32
             Sleep(15000);//ms
