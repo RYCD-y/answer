@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/code/exam/First_Robomaster_Electronic_Exam/c",
-      "program": "e:/code/exam/First_Robomaster_Electronic_Exam/c/build/Debug/outDebug",
+      "cwd": "e:/code/homework/halfwork",
+      "program": "e:/code/homework/halfwork/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
